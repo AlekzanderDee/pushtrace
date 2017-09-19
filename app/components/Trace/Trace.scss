@@ -1,0 +1,22 @@
+@import "ExceptionIcon/ExceptionIcon";
+@import "TagsIcon/TagsIcon";
+@import "EventsIcon/EventsIcon";
+@import "StartLabel/StartLabel";
+@import "SpanCount/SpanCount";
+@import "Duration/Duration";
+@import "PinnedIcon/PinnedIcon";
+@import "ExpandButton/ExpandButton";
+
+
+.trace {
+  box-shadow: 0 2px 8px $secondary-background-color;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  min-height: 55px;
+  transition: border 0.3s ease-out;
+
+  &:hover {
+    border: 2px solid $primary-color;
+  }
+}

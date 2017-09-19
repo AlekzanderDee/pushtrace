@@ -1,0 +1,27 @@
+.project-info {
+  width: 100%;
+
+
+  .panel__header {
+    position: relative;
+
+    .project-info__copy-btn {
+      padding: 8px;
+      cursor: pointer;
+      color: $base-dark-color;
+
+      position: absolute;
+      top: 4px;
+      right: 8px;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &:active {
+        top: 6px;
+      }
+    }
+  }
+
+}

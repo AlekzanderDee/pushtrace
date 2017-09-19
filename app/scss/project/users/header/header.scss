@@ -1,0 +1,40 @@
+.project-users > .project-users__header {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid $primary-color;
+
+    .project-users__filter {
+      .project-users__filter__input {
+        background-color: $base-background-color;
+        padding: 0 15px 0 8px;
+        transition: all 0.4s 0s ease-in;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        border-radius: 5px;
+        font-size: 14px;
+        height: 32px;
+        width: 248px;
+        margin: 0 8px;
+        box-shadow: none;
+        outline: none;
+
+        &.--empty {
+          width: 88px;
+        }
+      }
+
+      .project-users__filter__input__close {
+        position: relative;
+        left: -22px;
+        font-size: 14px;
+        cursor: pointer;
+
+      }
+    }
+
+  .fa-spin {
+    margin-right: 16px
+  }
+}

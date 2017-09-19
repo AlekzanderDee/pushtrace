@@ -1,0 +1,16 @@
+.panel {
+  box-shadow: 0 2px 8px $secondary-background-color;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: $base-background-color;
+
+  .panel__header {
+    padding: 8px;
+    border-bottom: 2px solid $primary-color;
+  }
+
+  .panel__body {
+    padding: 8px;
+  }
+}

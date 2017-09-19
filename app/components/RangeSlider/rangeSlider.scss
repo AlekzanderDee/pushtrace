@@ -1,0 +1,39 @@
+.pt-slider {
+  // overwriting default styles
+  .rc-slider {
+    // min-width: 1024px;
+    .rc-slider-rail {
+      background-color: $secondary-background-color;
+    }
+
+    .rc-slider-track {
+      background-color: $primary-color;
+    }
+    .rc-slider-handle {
+      border-color: $primary-color;
+      background-color: $base-background-color;
+      &:hover {
+        border-color: darken($primary-color, 10%);
+      }
+    }
+
+    &.rc-slider-disabled {
+      .rc-slider-track {
+        background-color: lighten($primary-color, 20%);
+      }
+      .rc-slider-handle {
+        border-color: lighten($primary-color, 20%);
+      }
+    }
+  }
+
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+
+  .pt-slider__caption {
+    text-overflow: ellipsis;
+    padding-right: 16px;
+
+  }
+}

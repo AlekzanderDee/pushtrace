@@ -1,0 +1,49 @@
+.project-list{
+
+  & > a:hover {
+    text-decoration: none;
+  }
+  .project-list__card.--project {
+
+    cursor: pointer;
+    color: $secondary-background-color;
+
+    transition: all 0.4s, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 18px $secondary-background-color;
+    }
+    .title {
+      align-self: flex-end;
+      background-color: $primary-color;
+      color: $base-background-color;
+      padding: 0 5px;
+    }
+
+    hr {
+      border-bottom: 1px solid $secondary-background-color;
+      width: 90%;
+      //margin: 0 0 10px 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .fa {
+        margin: 0 10px;
+        transition: all 0.4s ease;
+
+        &:hover {
+          color: $primary-color;
+          transform: scale(1.2);
+        }
+
+      }
+    }
+
+  }
+}

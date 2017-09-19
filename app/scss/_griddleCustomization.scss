@@ -1,0 +1,15 @@
+.griddle {
+  margin: 20px;
+
+  th span {
+    cursor: pointer;
+  }
+}
+
+.griddle .filter-container {
+  width: 30%;
+}
+
+#invites .griddle td {
+  line-height: 2em;
+}

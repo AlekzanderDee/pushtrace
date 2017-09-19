@@ -1,0 +1,118 @@
+#payments-manager {
+  position: relative;
+
+  #payment-manager__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .credit-card {
+      color: $base-background-color;
+      background: linear-gradient(0deg, $base-dark-color, $black-color);
+      height: 160px;
+      width: 240px;
+      margin: 10px 5px;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      box-shadow: 0 3px 3px $base-dark-color;
+
+      .credit-card__header {
+        display: flex;
+        flex-direction: row;
+        margin: 5px 0;
+
+        .credit-card__header__default-label {
+          color: $secondary-background-color;
+          margin: 3px;
+          font-size: 0.8em;
+          cursor: pointer;
+
+          &.--default {
+            color: $primary-color;
+          }
+          &:before {
+            content: "\f00c ";
+            font-family: FontAwesome;
+          }
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+      }
+
+      .credit-card__body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+      }
+      .credit-card__footer {
+        margin: 5px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .delete-card {
+          color: $secondary-background-color;
+          margin: 3px;
+          font-size: 0.8em;
+          cursor: pointer;
+
+          &:before {
+            content: "\f00d ";
+            font-family: FontAwesome;
+          }
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+        img {
+          width: 63px;
+          border-radius: 5px;
+          border: 1px solid $secondary-dark-color;
+        }
+
+      }
+    }
+  }
+
+  .payments-manager__errors p.text-danger {
+    //font-size: 0.7em;
+    margin: 0;
+  }
+}
+
+.modal-delete-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .modal-delete-card__body {
+    margin: 40px 10px 20px 10px;
+    flex: 1;
+    p {
+      text-align: center;
+      font-size: 1.2em;
+
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .modal-delete-card__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10px 20px;
+  }
+}

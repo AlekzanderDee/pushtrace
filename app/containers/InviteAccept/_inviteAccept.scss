@@ -1,0 +1,101 @@
+.invite-accept {
+    width: 100%;
+
+    .brand {
+        font-weight: 900;
+        letter-spacing: 3px;
+        color: $secondary-dark-color;
+        &:hover {
+            text-decoration: none;
+            color: $secondary-background-color;
+        }
+        &:visited, &:focus {
+            text-decoration: none;
+            outline: none;
+        }
+    }
+
+    .invite-accept__content {
+        padding: 20px 10px 10px 10px;
+        margin: 10px;
+        border-left: 1px solid $primary-color;
+
+        .invite-accept__content_message {
+            color: $secondary-background-color;
+            text-align: center;
+        }
+
+        #extra-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            .fp-link{
+                margin: 10px 10px 0 0;
+                color: $secondary-background-color;
+                font-weight: 200;
+                font-size: 14px;
+                padding-left: 30px;
+
+                &:hover {
+                    color: $primary-color;
+                }
+                &::before {
+                    font-family: FontAwesome;
+                    content:"\f13e";
+                    border: none;
+                    border-radius: 12px;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    color: $black-color;
+                    background-color: $secondary-dark-color;
+                    padding: 5px;
+                    line-height: 0.9em;
+                    font-size: 1em;
+                    transform: translate(-140%, 10%);
+                }
+            }
+
+            .su-link{
+                margin: 10px 10px 0 0;
+                color: $secondary-background-color;
+                font-weight: 200;
+                font-size: 14px;
+                padding-left: 30px;
+
+                &:hover, :hover:before {
+                    color: $primary-color;
+                }
+                &::before {
+                    font-family: FontAwesome;
+                    content:"\f18e";
+                    border: none;
+                    border-radius: 12px;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    color: $black-color;
+                    background-color: $secondary-dark-color;
+                    padding: 3px;
+                    line-height: 0.9em;
+                    font-size: 1.2em;
+                    transform: translate(-140%, 10%);
+                }
+            }
+        }
+
+        .btn {
+            margin: 15px 0;
+            text-align: center;
+            width: 100%;
+            font-weight: 200;
+            font-size: 15px;
+        }
+
+
+    }
+}
+
+

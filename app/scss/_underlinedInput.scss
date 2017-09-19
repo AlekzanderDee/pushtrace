@@ -1,0 +1,27 @@
+.ul-input-group {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $text-normal-cl;
+
+  &.--white {
+    color: $base-background-color;
+  }
+
+  .ul-input-group__input {
+    border: none;
+    border-bottom: 1px solid $primary-color;
+    font-size: 18px;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .ul-input-group__label {
+    font-size: 14px;
+    font-weight: 200;
+    align-self: flex-end;
+  }
+
+}

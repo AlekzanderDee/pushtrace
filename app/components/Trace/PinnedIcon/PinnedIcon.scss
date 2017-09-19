@@ -1,0 +1,9 @@
+.trace__pinned {
+  padding: 5px;
+  color: $secondary-dark-color;
+  opacity: 0.5;
+  &.--active {
+    color: $light-blue;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,122 @@
+#billing-plans-container {
+  min-height: 200px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 0 ;
+
+  &>div {
+    position: relative;
+  }
+
+  .billing-plan {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 200px;
+    box-shadow: 0 3px 3px $base-dark-color;
+    transition: transform 0.4s, box-shadow 0.4s ease;
+
+    // element has ACTIVE class when there is no processing going
+    &.--active{
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px $base-dark-color;
+      }
+
+      .billing-plan__footer__subscribe:hover {
+        background: linear-gradient(0deg, #E09526, #E16123);
+      }
+    }
+
+    &.--selected {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px $base-dark-color;
+
+      .billing-plan__footer__subscribe {
+        background: linear-gradient(0deg, #E09526, #E16123) !important;
+      }
+
+    }
+
+    .billing-plan__header {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      border-bottom: 2px solid $primary-color;
+      background: linear-gradient( 0deg, $base-dark-color, $black-color );
+
+
+      .billing-plan__header__title {
+        font-size: 0.9em;
+        color: $base-background-color;
+        margin: 5px;
+        font-variant-caps: all-petite-caps;
+      }
+
+      .billing-plan__header__amount {
+        color: $base-background-color;
+        font-size: 1.2em;
+        font-weight: 400;
+
+        .interval {
+          font-weight: 100;
+          font-size: 0.7em;
+        }
+      }
+    }
+
+    .billing-plan__body {
+      flex: 1;
+
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding: 10px;
+      background: $gray-color2;
+      font-size: 0.8em;
+      color: $secondary-dark-color;
+
+      border-bottom: 1px solid $black-color;
+    }
+
+    .billing-plan__footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 100px;
+      background: linear-gradient( 0deg, $black-color , $base-dark-color);
+
+      .billing-plan__footer__subscribe {
+        height: 50px;
+        width: 50px;
+        border: 2px solid $black-color !important;
+        border-radius: 50%;
+        margin: 5px;
+        background: linear-gradient( 0deg, $black-color, $base-dark-color);
+        color: $base-dark-color;
+        text-shadow: 2px $black-color;
+        position: relative;
+
+        &:focus {
+          outline: none;
+
+          &:after {
+            border-radius: 50%;
+            content: " ";
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border: 1px solid $primary-color;
+          }
+        }
+      }
+    }
+
+  }
+
+}

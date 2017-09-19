@@ -1,0 +1,9 @@
+.trace__exception {
+  padding: 5px;
+  color: $secondary-dark-color;
+  opacity: 0.5;
+  &.--active {
+    opacity: 1;
+    color: $danger-color;
+  }
+}

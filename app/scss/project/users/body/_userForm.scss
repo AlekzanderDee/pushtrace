@@ -1,0 +1,26 @@
+.project-users__body__details__user-form {
+  min-width: 190px;
+  .project-users__body__details__user-form__errors {
+    .error {
+      color: $danger-color;
+      font-size: 14px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+.project-users__body__details__edit-user {
+  text-align: center;
+
+  .project-users__body__details__edit-user__email{
+    color: $secondary-background-color;
+  }
+
+  .project-users__body__details__edit-user__delete-btn {
+    width: 100%;
+  }
+}

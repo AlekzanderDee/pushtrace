@@ -1,0 +1,56 @@
+@import 'userForm';
+
+.project-users {
+    min-height: 440px;
+}
+
+.project-users > .project-users__body {
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex: 1;
+
+  .project-users__body__list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    .project-users__body__user-item {
+      transition: all 0.15s 0s ease-in;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      cursor: pointer;
+
+      width: 248px;
+      min-height: 56px;
+      background-color: $base-background-color;
+      color: $black-color;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+
+      &.--active {
+        background-color: $black-color;
+        color: $base-background-color;
+      }
+
+      .project-users__body__user-item__text {
+        margin: 8px;
+        font-size: 16px;
+      }
+
+      .project-users__body__user-item__icon {
+        margin: 8px;
+      }
+    }
+  }
+
+  .project-users__body__details {
+    position: relative; // need for positioning spinner overlay inside
+    background-color: $black-color;
+    border-bottom-right-radius: 5px;
+  }
+
+}

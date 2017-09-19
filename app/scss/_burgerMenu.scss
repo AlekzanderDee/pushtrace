@@ -1,0 +1,243 @@
+///* Position and sizing of burger button */
+//.bm-burger-button {
+//  position: fixed;
+//  width: 36px;
+//  height: 30px;
+//  left: 36px;
+//  top: 10px;
+//}
+//
+///* Color/shape of burger icon bars */
+//.bm-burger-bars {
+//  background: #2A3F54;
+//}
+//
+///* Position and sizing of clickable cross button */
+//.bm-cross-button {
+//  height: 24px;
+//  width: 24px;
+//}
+//
+///* Color/shape of close button cross */
+//.bm-cross {
+//  background: #bdc3c7;
+//}
+
+.bm-menu-wrap {
+  width: 250px !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  //padding: 1.2em 1.5em 0;
+  font-size: larger;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: $secondary-background-color;
+  //padding: 0.8em;
+
+  width: 100%;
+
+  //> div > .bm-item > .bm-item-head {
+  //  background: $base-dark-color;
+  //}
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+/* CUSTOM styles */
+.bm-menu {
+  background: $black-color;
+  user-select: none;
+
+  .bm-menu__inline-controls {
+    padding: 3px 10px;
+    border-bottom: 1px solid $secondary-background-color !important;
+    font-size: 0.7em !important;
+    display:flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center;
+
+    .bm-menu__inline-controls__title {
+      width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    .bm-menu__inline-controls__pin:after {
+      display: inline-block;
+      content: '\f08d';
+      font-family: FontAwesome;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+
+    .fa {
+      cursor: pointer;
+    }
+
+  }
+}
+
+.bm-item {
+
+  &:hover, &.--active {
+    .bm-item-head {
+      color: $primary-color;
+      &:after {
+        width: 200px;
+        left: 30px;
+      }
+      .bm-item-icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .bm-item-icon  {
+    font-size: 0.8em;
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .bm-item-head {
+    padding: 10px 0 10px 30px;
+    font-weight: 300;
+    cursor: pointer;
+    position: relative;
+
+    &.--closed + .bm-item-children {
+      opacity: 0;
+    }
+
+    &.--opened + .bm-item-children {
+      opacity: 1;
+    }
+
+    &:after {
+      content:"";
+      transition: width 0.5s ease, left 0.5s ease;
+      width: 0;
+      border-bottom: 1px solid $primary-color;
+      position: absolute;
+      left: 120px;
+      bottom: -1px;
+    }
+
+    &:hover, &.--active {
+      color: $primary-color;
+
+      &:after {
+        width: 200px;
+        left: 30px;
+      }
+
+      .bm-item-icon {
+        opacity: 1;
+      }
+    }
+
+    .bm-item-arrow {
+      margin-left: 10px;
+      transition: all 0.3s ease;
+
+      &.open {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .bm-item-children {
+    cursor: pointer;
+    padding-left: 30px;
+    transition: opacity 0.2s ease-in 0.1s;
+
+    span.bm-item-child {
+
+      & > .bm-item {
+        padding-left: 20px;
+
+        & > .bm-item-head {
+          background: none;
+          color: inherit;
+          &:hover, &.--active {
+            color: $primary-color;
+          }
+          &:after {
+            width:0;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+// Managing the pinned state
+
+.bm-menu-wrapper.--pinned {
+  display: flex;
+  align-items: stretch;
+
+  & > div {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .bm-menu__inline-controls {
+    .bm-menu__inline-controls__close:after {
+      display: inline-block;
+      content: '\f00d';
+      font-family: FontAwesome;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .bm-menu__inline-controls__pin:after {
+      transform: rotate(0deg);
+    }
+  }
+
+  .bm-menu-wrap {
+    height: auto !important;
+    position: inherit !important;
+    display: flex !important;
+    align-items: stretch !important;
+
+    .bm-menu {
+      height: auto !important;
+      width: 100% !important;
+    }
+  }
+}
+
+// Burger button
+.bm-button {
+  cursor: pointer;
+  color: $text-subtle-cl !important;
+  font-size: 1.2em !important;
+  border: 1px solid $text-subtle-cl;
+  border-radius: 2px;
+  padding: 2px;
+
+  &.--open {
+    color: $base-background-color !important;
+    border-color: $base-background-color !important;
+  }
+}
+

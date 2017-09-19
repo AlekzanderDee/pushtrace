@@ -1,0 +1,11 @@
+.trace__span-count {
+  padding: 5px;
+  color: $secondary-dark-color;
+  font-size: 13px;
+
+  .trace__span-count__count {
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+}

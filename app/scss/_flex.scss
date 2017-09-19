@@ -1,0 +1,28 @@
+.fl {
+  display: flex;
+
+  &.fl-column{
+    flex-direction: column;
+  }
+
+  &.fl-abs-centered {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.fl-vert-centered {
+    align-items: center;
+  }
+
+  &.fl-hor-centered {
+    justify-content: center;
+  }
+
+  &.fl-sa {
+    justify-content: space-around;
+  }
+
+  &.fl-sb {
+    justify-content: space-between;
+  }
+}

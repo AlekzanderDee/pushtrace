@@ -1,0 +1,17 @@
+.hel-modal {
+    width: auto !important;
+    margin: 10% !important;
+    padding: 0 !important;
+    background: $base-background-color !important;
+  }
+
+@media (min-width: 768px) {
+  .hel-modal {
+    width: 600px !important;
+    margin: 10% auto !important;
+
+    &.small {
+      width: 300px !important;
+    }
+  }
+}

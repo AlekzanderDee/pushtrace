@@ -1,0 +1,81 @@
+// SOURCE: http://codepen.io/bdan/pen/WxWjLE?editors=1100
+
+
+.ul-select-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: transparent;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  color: $text-normal-cl;
+
+  &.--white {
+    color: $base-background-color;
+  }
+  &:hover:after {
+      content: '\f107';
+      font-family: FontAwesome;
+      position: absolute;
+      top: 8px;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      color: $primary-color;
+      pointer-events: none;
+    }
+
+  .ul-select-group__select {
+    border: none;
+    border-bottom: 1px solid $primary-color;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+    //height: 100%;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    padding: 1px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+
+    // Disable default styling on ff
+    -moz-appearance: none;
+
+    // Disable ugly ass outline on firefox
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+
+    // Disable default styling on webkit browsers
+    -webkit-appearance: none;
+
+    // Disable default arrow on IE 11+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+      //border-color: #63ffb4;
+    }
+
+
+    option {
+      color: black;
+    }
+  }
+
+  .ul-select-group__label {
+    font-size: 14px;
+    font-weight: 200;
+    align-self: flex-end;
+  }
+}
+
+

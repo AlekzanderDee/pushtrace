@@ -1,0 +1,92 @@
+#account-settings {
+  width: 100%;
+
+  .fl {
+    justify-content: center;
+  }
+
+  #settings-header {
+    display: flex;
+    flex-flow: column;
+    width: 33%;
+
+    h3 {
+      align-self: flex-start;
+      color: $text-subtle-cl;
+    }
+    hr {
+      border: 1px solid $text-subtle-cl;
+    }
+  }
+
+  #account-settings-selector {
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
+
+    .settings-section {
+      transition: all 0.5s ease;
+      border-bottom: 2px solid transparent;
+      user-select: none;
+
+      &.active {
+        border-bottom: 2px solid $primary-color;
+        text-shadow: 3px 3px 5px $secondary-background-color;
+      }
+    }
+
+  }
+
+  #account-settings-content {
+    background: $gray-color2;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px $text-subtle-cl;
+    padding: 25px 15px;
+
+    min-width: 350px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 17px;
+          font-weight: 400;
+          line-height: 1;
+      }
+      hr {
+        margin: 2px 0;
+        border: 1px solid $primary-color;
+
+        +label {
+          align-self: flex-end;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1;
+        }
+      }
+
+      input {
+          padding: 0;
+          transition: all 0ms ease-in;
+          border: 0px;
+          background: $gray-color2;
+          font-size: 17px;
+          font-weight: 400;
+          color: $primary-color;
+          height: 17px;
+          margin: 4px 0 5px;
+          box-shadow: none;
+          outline: none;
+        }
+    }
+    // change password form
+    #change-password{
+      h4 {
+        margin: 0 0 5px;
+      }
+    }
+
+  }
+}

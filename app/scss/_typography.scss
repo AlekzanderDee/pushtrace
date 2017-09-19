@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('../vendor_static/fonts/lato/Lato-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../vendor_static/fonts/lato/Lato-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../vendor_static/fonts/lato/Lato-Black.ttf');
+  font-weight: 900;
+}
+
+.text-2x {
+  font-size: 2em !important;
+}
+
+.line-h-2x {
+  line-height: 2em !important;
+}
+
+
+h1 {
+  font-family: $heading-font-family;
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 38px;
+  color: $text-normal-cl;
+}
+
+h2 {
+  font-family: $heading-font-family;
+  font-weight: 300;
+  line-height: 39px;
+  font-size: 28px;
+  color: $text-normal-cl;
+}
+
+h3 {
+  font-family: $heading-font-family;
+  font-weight: 300;
+  line-height: 33px;
+  font-size: 22px;
+  color: $text-medium-cl;
+}
+
+h4 {
+  font-family: $heading-font-family;
+  font-weight: 300;
+  line-height: 31px;
+  font-size: 20px;
+  color: $text-normal-cl;
+}
+
+h5 {
+  font-family: $heading-font-family;
+  font-weight: 600;
+  line-height: 25px;
+  font-size: 14px;
+  color: $text-subtle-cl;
+}
+
+// text color classes
+.normal-color {
+  color: $text-normal-cl;
+}
+.medium-color {
+  color: $text-medium-cl;
+}
+.subtle-color {
+  color: $text-subtle-cl;
+}
+.medium-light-color {
+  color: $text-medium-light-cl;
+}
+.light-color {
+  color: $text-light-cl;
+}
